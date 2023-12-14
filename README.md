@@ -1,3 +1,3 @@
-# Flutter Expense Tracker
+# Flutter Expense Tracker App
 
 Built in Flutter
