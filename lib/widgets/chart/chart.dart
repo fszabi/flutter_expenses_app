@@ -35,11 +35,11 @@ class Chart extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.all(16),
       padding: const EdgeInsets.symmetric(
-        vertical: 16,
-        horizontal: 8,
+        vertical: 15,
+        horizontal: 20,
       ),
       width: double.infinity,
-      height: 180,
+      height: 200,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         gradient: LinearGradient(
