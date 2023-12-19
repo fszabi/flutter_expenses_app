@@ -94,23 +94,30 @@ class _ExpensesState extends State<Expenses> {
         ],
       ),
       body: width < 600
-          ? Column(
-              children: [
-                Chart(expenses: _registeredExpenses),
-                Expanded(
-                  child: mainContent,
-                ),
-              ],
+          ? Container(
+              margin: const EdgeInsets.symmetric(horizontal: 0, vertical: 20),
+              child: Column(
+                children: [
+                  Chart(expenses: _registeredExpenses),
+                  Expanded(
+                    child: mainContent,
+                  ),
+                ],
+              ),
             )
-          : Row(
-              children: [
-                Expanded(
-                  child: Chart(expenses: _registeredExpenses),
-                ),
-                Expanded(
-                  child: mainContent,
-                ),
-              ],
+          : Container(
+              margin: const EdgeInsets.symmetric(horizontal: 0, vertical: 20),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    child: Chart(expenses: _registeredExpenses),
+                  ),
+                  Expanded(
+                    child: mainContent,
+                  ),
+                ],
+              ),
             ),
     );
   }

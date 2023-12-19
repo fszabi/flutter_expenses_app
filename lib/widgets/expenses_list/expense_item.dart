@@ -8,7 +8,12 @@ class ExpenseItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+
     return Card(
+      margin: width < 600
+          ? const EdgeInsets.fromLTRB(20, 0, 20, 20)
+          : const EdgeInsets.fromLTRB(0, 0, 20, 20),
       child: Padding(
         padding: const EdgeInsets.symmetric(
           vertical: 15,

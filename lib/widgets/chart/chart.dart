@@ -30,10 +30,13 @@ class Chart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
     final isDarkMode =
         MediaQuery.of(context).platformBrightness == Brightness.dark;
     return Container(
-      margin: const EdgeInsets.all(16),
+      margin: width < 600
+          ? const EdgeInsets.fromLTRB(20, 0, 20, 30)
+          : const EdgeInsets.fromLTRB(20, 0, 30, 0),
       padding: const EdgeInsets.symmetric(
         vertical: 15,
         horizontal: 20,
